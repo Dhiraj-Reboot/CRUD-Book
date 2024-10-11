@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            /* background-color: #5b8fdb; */
+            background-image: url("img2.jfif");
+            background-size: cover;
+            background-position: center;
+            object-fit: fill;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .container {
+            /* align-content: center;
+            margin: auto; */
+            width: 100%;
+            max-width: 900px;
+        }
+        .container form {
+            justify-content: center;
+            align-content: center;
+            margin: auto;
+            /* margin-left: auto; */
+            width: 80%;
+            max-width: 700px;
+        }
+        #bookForm {
+            background: transparent;
+            backdrop-filter: blur(20px);
+           
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 5, 5, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #bookForm div {
+            margin-bottom: 10px;
+            
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: white;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            margin: auto;
+          padding: 10px;
+            border-radius: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #204722;
+        }
+        input[type="text"]:hover {
+            background-color: #1fc9b2;
+        }
+        input[type="date"]:hover {
+            background-color: #1fc9b2;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0d41ebea;
+        }
+
+        tr{
+            background-color: #0ddceba8;
+
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        #delbtn{
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Book Records</h1>
+        <form method="post" id="bookForm">
+            <div>
+                <label for="name">Book</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="price">Price</label>
+                <input type="text" name="price" id="price">
+            </div>
+            <div>
+                <label for="author">Author Name</label>
+                <input type="text" name="author" id="author">
+            </div>
+            <div>
+                <label for="date">Publish Date</label>
+                <input type="date" name="date" id="date">
+            </div>
+           
+            <div>
+                <input type="submit" value="SUBMIT">
+            </div>
+        </form>
+
+        <table border="" id="bookTbl">
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Price</th>
+                    <th>Author Name</th>
+                    <th>Publish Date</th>
+                    <th>Optional</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
